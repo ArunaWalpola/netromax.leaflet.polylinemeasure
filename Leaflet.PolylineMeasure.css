@@ -1,11 +1,6 @@
-/*********************************************************
-**                                                      **
-**       Leaflet Plugin "Leaflet.PolylineMeasure"       **
-**       File "Leaflet.PolylineMeasure.css"             **
-**       Date: 2023-05-26                               **
-**                                                      **
-*********************************************************/
-
+.leaflet-control {
+    cursor: pointer;
+}
 
 a.polyline-measure-controlOnBgColor, a.polyline-measure-controlOnBgColor:hover {
     background-color: #8f8;
@@ -20,14 +15,9 @@ a.polyline-measure-clearControl:active {
     background-color: #f88;
 }
 
-.polyline-measure-unicode-icon, .polyline-measure-clearControl, #unitControlId
-{
-    cursor: pointer;
-}
-
 .polyline-measure-tooltip {
-    font: 10px Arial, Helvetica, sans-serif;
-    line-height: 10px;
+    font: 12px Arial, Helvetica, sans-serif;
+    line-height: 12px;
     background-color: rgba(255, 255, 170, 0.7);
     border-radius: 3px;
     box-shadow: 1px 1px 4px #888;
@@ -38,6 +28,7 @@ a.polyline-measure-clearControl:active {
     white-space: nowrap;
     text-align: right;
 }
+
 
 .polyline-measure-tooltip-end {
     background-color: rgba(255, 255, 40, 0.7);
@@ -50,9 +41,19 @@ a.polyline-measure-clearControl:active {
 
 .polyline-measure-tooltip-difference {
     color: #060;
-    font-style: italic;
+    /*font-style: italic;*/
+}
+.polyline-measure-tooltip-gps {
+    color: rgb(47, 0, 255);
+    font-size: 10px;
+    padding-top: 3px;
+    /*font-style: italic;*/
 }
 
+
+.polyline-measure-tooltip-hidden {
+    visibility:hidden;
+}
 .polyline-measure-popupTooltip {
     font: 11px Arial, Helvetica, sans-serif;
     line-height: 11px;
