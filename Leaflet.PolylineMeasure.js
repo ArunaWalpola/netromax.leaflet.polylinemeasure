@@ -837,13 +837,13 @@
             var last = function() {
                 return this.slice(-1)[0];
             };
-            this._rubberlinePath = L.polyline ([], {
-                // Style of temporary, dashed line while moving the mouse
-                color: this.options.tempLine.color,
-                weight: this.options.tempLine.weight,
-                interactive: false,
-                dashArray: '8,8'
-            }).addTo(this._layerPaint).bringToBack();
+            // this._rubberlinePath = L.polyline ([], {
+            //     // Style of temporary, dashed line while moving the mouse
+            //     color: this.options.tempLine.color,
+            //     weight: this.options.tempLine.weight,
+            //     interactive: false,
+            //     dashArray: '8,8'
+            // }).addTo(this._layerPaint).bringToBack();
 
             var polylineState = this;   // use "polylineState" instead of "this" to allow measuring on 2 different maps the same time
 
@@ -954,19 +954,20 @@
                 }
             };
 
-            var firstTooltip = L.marker (clickCoords, {
-                icon: icon,
-                interactive: false
-            })
-            firstTooltip.addTo(this._layerPaint);
-            var text = '';
-            if (this.options.showBearings === true) {
-                text = this.options.bearingTextIn+':---°<br>'+this.options.bearingTextOut+':---°';
-            }
-            text = text + '<div class="polyline-measure-tooltip-difference">+' + '0</div>';
-            text = text + '<div class="polyline-measure-tooltip-total">' + '0</div>';
-            firstTooltip._icon.innerHTML = text;
-            this._currentLine.tooltips.push (firstTooltip);
+            // Commented out to prevent first marker tooltip from appearing
+            // var firstTooltip = L.marker (clickCoords, {
+            //     icon: icon,
+            //     interactive: false
+            // })
+            // firstTooltip.addTo(this._layerPaint);
+            // var text = '';
+            // if (this.options.showBearings === true) {
+            //     text = this.options.bearingTextIn+':---°<br>'+this.options.bearingTextOut+':---°';
+            // }
+            // text = text + '<div class="polyline-measure-tooltip-difference">+' + '0</div>';
+            // text = text + '<div class="polyline-measure-tooltip-total">' + '0</div>';
+            // firstTooltip._icon.innerHTML = text;
+            // this._currentLine.tooltips.push (firstTooltip);
             this._currentLine.circleCoords.last = last;
             this._currentLine.tooltips.last = last;
             this._currentLine.circleMarkers.last = last;
