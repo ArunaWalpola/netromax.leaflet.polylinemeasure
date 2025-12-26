@@ -1,6 +1,6 @@
 {
-  "name": "leaflet.polylinemeasure",
-  "version": "1.0.0",
+  "name": "@arunawalpola/leaflet.polylinemeasure",
+  "version": "1.0.1",
   "description": "Leaflet Plugin to measure distances of simple lines as well as of complex polylines",
   "main": "Leaflet.PolylineMeasure.js",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ppete2/Leaflet.PolylineMeasure.git"
+    "url": "git+https://github.com/ArunaWalpola/netromax.leaflet.polylinemeasure.git"
   },
   "author": "",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/ppete2/Leaflet.PolylineMeasure/issues"
+    "url": "https://github.com/ArunaWalpola/netromax.leaflet.polylinemeasure/issues"
   },
-  "homepage": "https://github.com/ppete2/Leaflet.PolylineMeasure#readme"
+  "homepage": "https://github.com/ArunaWalpola/netromax.leaflet.polylinemeasure#readme"
 }

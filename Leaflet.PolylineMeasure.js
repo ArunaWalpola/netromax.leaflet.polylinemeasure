@@ -759,17 +759,19 @@
             var textCurrent = '';
             if (differenceRound.value > 0 ) {
                 if (this.options.showBearings === true) {
-                     textCurrent = this.options.bearingTextIn + ': ' + angleIn + '°<br>'+this.options.bearingTextOut+':---°';
+                    //textCurrent = this.options.bearingTextIn + ': ' + angleIn + '°<br>'+this.options.bearingTextOut+':---°';
+                    textCurrent = this.options.bearingTextIn + '' + angleIn + '°';
                 }
                 textCurrent += '<div class="polyline-measure-tooltip-difference">+' + differenceRound.value + '&nbsp;' +  differenceRound.unit + '</div>';
             }
-            textCurrent += '<div class="polyline-measure-tooltip-total">' + totalRound.value + '&nbsp;' +  totalRound.unit + '</div>';
+            //textCurrent += '<div class="polyline-measure-tooltip-total">' + totalRound.value + '&nbsp;' +  totalRound.unit + '</div>';
             currentTooltip._icon.innerHTML = textCurrent;
             if ((this.options.showBearings === true) && (prevTooltip)) {
-                var textPrev = prevTooltip._icon.innerHTML;
-                var regExp = new RegExp(this.options.bearingTextOut + '.*\°');
-                var textReplace = textPrev.replace(regExp, this.options.bearingTextOut + ': ' + angleOut + "°");
-                prevTooltip._icon.innerHTML = textReplace;
+                // var textPrev = prevTooltip._icon.innerHTML;
+                // var regExp = new RegExp(this.options.bearingTextOut + '.*\°');
+                // var textReplace = textPrev.replace(regExp, this.options.bearingTextOut + ': ' + angleOut + "°");
+                // prevTooltip._icon.innerHTML = textReplace;
+                prevTooltip._icon.innerHTML = '';
             }
         },
 
@@ -800,10 +802,10 @@
                 html : "<div style = 'color:" + this.options.arrow.color + "; font-size: 16px; line-height: 16px; vertical-align:top; transform: rotate("+ cssAngle +"deg)'>&#x27a4;</div>"   // best results if iconSize = font-size = line-height and iconAnchor font-size/2 .both values needed to position symbol in center of L.divIcon for all font-sizes.
             });
             var newArrowMarker = L.marker (center, {icon: iconArrow, zIndexOffset:-50}).addTo(this._layerPaint);  // zIndexOffset to draw arrows below tooltips
-            if (!this._currentLine){  // just bind tooltip if not drawing line anymore, cause following the instruction of tooltip is just possible when not drawing a line
-                newArrowMarker.bindTooltip (this.options.tooltipTextAdd, {direction:'top', opacity:0.7, className:'polyline-measure-popupTooltip'});
-            }
-            newArrowMarker.on ('click', this._clickedArrow, this);
+            // if (!this._currentLine){  // just bind tooltip if not drawing line anymore, cause following the instruction of tooltip is just possible when not drawing a line
+            //     newArrowMarker.bindTooltip (this.options.tooltipTextAdd, {direction:'top', opacity:0.7, className:'polyline-measure-popupTooltip'});
+            // }
+            // newArrowMarker.on ('click', this._clickedArrow, this);
             return newArrowMarker;
         },
 
